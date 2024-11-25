@@ -81,7 +81,7 @@ h2 {
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("home.png"); /* Ensure this path is correct */
-  height: 100vh; /* Full page height */
+  height: 100svh; /* Full page height */
   width: 100%; /* Full page width */
   background-position: center;
   background-repeat: no-repeat;
@@ -270,7 +270,7 @@ button:hover {
 
 .responsive-container-block {
   display: flex;
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
   border: 2px solid #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -429,12 +429,11 @@ button:hover {
 
 .container-cortesra {
   display: flex;
-
   border: 2px solid rgb(250, 246, 246);
   padding: 10px;
   background: linear-gradient(to right, purple, blue);
-  width: 70%; /* Adjust width */
-  height: 50vh; /* Adjust height */
+  width: 80%; /* Adjust width */
+  
   margin: 0 auto; /* Center the container horizontally */
   margin-top: 80px;
 }
