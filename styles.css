@@ -1,0 +1,705 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #0c0c0c;
+}
+
+header {
+  background: linear-gradient(to right, blue, purple);
+  text-align: center;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Fixes the header at the top */
+  top: 0; /* Keeps it at the top */
+  width: 100%; /* Ensures it spans the full width */
+  z-index: 1000; /* Keeps it above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
+header .logo {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale */
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Positioned below the text */
+  width: 0;
+  height: 2px;
+  background-color: #0011ff; /* Highlight color */
+  transition: width 0.3s; /* Smooth underline animation */
+}
+
+nav ul li a:hover {
+  color: #ffffff; /* Changes text color to gold */
+  transform: scale(1.1); /* Slightly enlarges the link for emphasis */
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Expands the underline across the text */
+}
+
+section {
+  padding: 50px 20px;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* home page */
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("home.png"); /* Ensure this path is correct */
+  height: 100vh; /* Full page height */
+  width: 100%; /* Full page width */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Centered text with sliding animation */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+
+  animation: slideIn 3s ease-in-out; /* Apply the sliding animation */
+}
+
+/* Sliding animation */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%); /* Start from above */
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, 0); /* Slide towards the center */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%); /* Final position at the center */
+  }
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  margin-top: 30px;
+  display: inline-block;
+  padding: 20px 25px;
+  color: rgb(255, 255, 255);
+  background-color: purple;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* service page */
+
+.service .services-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.service-item {
+  background-color: #333;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 20%;
+}
+
+button {
+  display: flex;
+  padding: 20px 20px;
+  margin-top: 30px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+.about-content {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.team .team-members {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-member {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.map {
+  margin-top: 20px;
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+}
+
+.card {
+  cursor: pointer;
+  text-align: center;
+  background: purple;
+  padding: 30px;
+  width: 260px;
+  height: 260px;
+  margin: 10px;
+  border: 3px solid white; /* Adds a white border */
+  border-radius: 50%; /* Slightly round the corners */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth effect for hover */
+}
+
+.card:hover {
+  transform: scale(1.1); /* Slight zoom-in effect */
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Glowing shadow effect */
+}
+
+.card h3 {
+  padding: 30px;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+}
+.card:hover h3 {
+  color: #fff;
+}
+
+.card p {
+  font-size: 0.8em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.card:hover p {
+  color: #fff;
+}
+
+.card:hover {
+  background-color: blue;
+}
+
+/* about us */
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.responsive-container-block {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  overflow: hidden;
+  background: linear-gradient(to right, #6a11cb, #dc25fc);
+}
+
+.ultimateImg {
+  flex: 1;
+  max-width: 30%;
+}
+
+.ultimateImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.allText {
+  flex: 2;
+  padding: 20px;
+}
+
+.allText h1 {
+  margin: 50px auto;
+  text-align: center;
+  color: #fffbfb; /* मजकूराचा रंग */
+  width: fit-content; /* मजकूराच्या लांबीपुरतं सीमित */
+}
+
+.allText h3 {
+  text-align: justify;
+  color: #fffbfb;
+  justify-content: center;
+}
+
+.allText p {
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: justify;
+}
+
+/*meeet team */
+
+/* Section styles */
+.team-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.team-section h1 {
+  font-size: 2.5em;
+  color: rgb(255, 255, 255); /* Title in purple */
+  margin-bottom: 80px;
+}
+
+/* Team container */
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+/* Card styles */
+.team-card {
+  background: linear-gradient(
+    145deg,
+    rgb(231, 11, 231),
+    rgba(0, 0, 250, 0.473)
+  ); /* Purple to blue gradient */
+  padding: 9px;
+  width: 400px; /* Increased width for better layout */
+  box-shadow: 0 5px 15px rgb(94, 90, 90);
+  color: white;
+  transition: transform 0.3s ease;
+  border-color: white;
+  border: 1px solid #ddd;
+}
+
+/* Hover effect for cards */
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Photo and content */
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  margin-bottom: 15px;
+}
+
+.photo-ceo {
+    background-color: white;
+    background-image: url(''); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    width: 150px; /* Set the width of the div */
+    height: 150px; /* Set the height of the div */
+  }
+  
+  .photo-director {
+    background-color: white;
+    background-image: url(''); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    width: 150px; /* Set the width of the div */
+    height: 150px; /* Set the height of the div */
+  }
+.name-position {
+  text-align: left;
+}
+
+.name-position h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.name-position h3 {
+  font-size: 1em;
+  margin: 5px 0;
+  color: rgb(255, 255, 255); /* Subtext in blue */
+}
+
+/* Information text */
+.info {
+  font-size: 0.9em;
+  margin: 15px 0;
+  text-align: left;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.icon {
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: yellow; /* Highlight effect on hover */
+}
+
+/* cortesra */
+
+.container-cortesra {
+  display: flex;
+
+  border: 2px solid rgb(250, 246, 246);
+  padding: 10px;
+  background: linear-gradient(to right, purple, blue);
+  width: 70%; /* Adjust width */
+  height: 50vh; /* Adjust height */
+  margin: 0 auto; /* Center the container horizontally */
+  margin-top: 80px;
+}
+
+.left img {
+  width: 200px; /* Adjust as per your image size */
+  height: auto;
+  margin: 50px 0;
+}
+
+.cortesra {
+  margin-left: 50px; /* Adjusted margin for better spacing */
+  margin-top: 10px;
+}
+
+.cortesra-heading {
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  text-align: center; /* Center the text */
+}
+
+.cortesra-byline {
+  font-size: 24px;
+  margin: 30px 0;
+  color: white;
+  animation: slideUp 3s ease-in-out;
+}
+
+.cortesra-info {
+  font-size: 18px;
+  margin: 30px 0;
+  line-height: 1.6;
+  color: white;
+  animation: fadeIn 4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* contact */
+
+.hero-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #6a11cb, #dc25fc);
+  color: white;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  margin-bottom: 20px; /* Added margin to create space below paragraphs */
+  padding: 10px; /* Added padding inside the paragraph */
+}
+
+.hero-section .buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.hero-section .buttons button:hover {
+  background: linear-gradient(to right, #6a11cb, #dc25fc);
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.info-box,
+.form-box,
+.map-box {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 30%;
+}
+
+.info-box h2,
+.form-box h2 {
+  margin-bottom: 10px;
+  color: #f7f6f4;
+}
+
+/* Info Box Paragraphs */
+.info-box p {
+  margin-bottom: 15px; /* Added margin between paragraphs */
+  padding: 5px; /* Added padding inside paragraphs */
+}
+
+/* Form Inputs and Textarea */
+.form-box input,
+.form-box textarea {
+  margin: 10px 0; /* Added vertical space between form elements */
+  padding: 12px; /* Increased padding inside inputs and textareas */
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+/*
+  form button {
+    background-color: #dc25fc;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;  
+    padding: 12px;     
+    border-radius: 5px;
+
+  }
+
+  form button:hover {
+    background-color: #ff6600;
+  }
+*/
+.map-box iframe {
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+hr {
+  border-color: white;
+  margin: 10px 0;
+  border: 1px solid white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+/* Social Media Links */
+.social-media {
+  display: flex;
+  gap: 20px;
+  margin-right: 8px;
+}
+
+.social-media a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.social-media i {
+  margin-right: 8px;
+}
+
+.copyright {
+  font-size: 14px;
+  margin-right: 400px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-box,
+  .form-box,
+  .map-box {
+    width: 80%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-box,
+  .form-box,
+  .map-box {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-media {
+    margin-top: 10px;
+  }
+
+  .copyright {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .social-media {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-content {
+    text-align: center;
+  }
+
+  .info-box,
+  .form-box,
+  .map-box {
+    width: 100%;
+  }
+}
