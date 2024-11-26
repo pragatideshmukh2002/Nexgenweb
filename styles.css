@@ -807,41 +807,57 @@ form button:hover {
 }
 
 /* Media Queries */
-/* Mobile Devices */
-@media (max-width: 767px) {
+/* Mobile Devices - Small (max-width: 600px) */
+@media (max-width: 600px) {
     .contact-container {
         flex-direction: column; /* Stack items vertically */
         padding: 10px;
     }
 
     .form-box, .map-box {
-        width: 90%; /* Make both boxes take up almost the entire width */
-        margin: 10px 0; /* Add margin between the form and map */
+        width: 100%; /* Make both boxes take up the full width */
+        margin: 10px 0; /* Add margin between form and map */
     }
 
     form button {
-        width: 100%; /* Make the button take full width */
+        width: 100%; /* Button takes up full width */
     }
 }
 
-/* Tablets and Medium Devices */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* Mobile Devices - Medium (max-width: 767px) */
+@media (max-width: 767px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
     .form-box, .map-box {
-        width: 48%; /* Make both boxes take up 48% of the container width */
+        width: 100%; /* Full width for smaller mobile screens */
+        margin: 10px 0; /* Ensure there is space between boxes */
     }
 
     form button {
-        width: 100%; /* Button takes up full width for better mobile/tablet use */
+        width: 100%;
+    }
+}
+
+/* Tablets and Medium Devices (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .form-box, .map-box {
+        width: 48%; /* Make both boxes take up 48% of the container */
+    }
+
+    form button {
+        width: 100%; /* Full-width button for medium screens */
     }
 }
 
 /* Large Devices (Desktops) */
 @media (min-width: 1025px) {
     .form-box, .map-box {
-        width: 40%; /* Keep each box at 40% of the width on larger screens */
+        width: 40%; /* Keep both boxes at 40% of the container width */
     }
 }
-
 
   /* Footer */
   .footer {
