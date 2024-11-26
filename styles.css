@@ -208,7 +208,7 @@ h2 {
     transform: translate(-50%, -50%);
   }
 }
-
+/* 
 .hero-text button {
   border: none;
   outline: 0;
@@ -219,7 +219,7 @@ h2 {
   background-color: purple;
   text-align: center;
   cursor: pointer;
-}
+} */
 
 .hero-text button:hover {
   background-color: blue;
@@ -227,9 +227,17 @@ h2 {
 }
 
 /* Services Page */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+}
 .service .services-list {
   display: flex;
   justify-content: space-around;
+  
 }
 
 .service-item {
@@ -241,16 +249,20 @@ h2 {
   width: 20%;
 }
 
+
+/* Get started button */
 button {
   display: flex;
   padding: 10px 25px;
   margin-top: 30px;
+  align-items: center;
+  display: inline-block;
   background-color: purple;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 18px;
 }
 
 button:hover {
@@ -293,13 +305,7 @@ button:hover {
   text-align: center;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-  align-items: center;
-}
+
 
 .card {
   cursor: pointer;
@@ -347,7 +353,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   flex-wrap: wrap;
 }
 
@@ -499,7 +505,7 @@ button:hover {
 }
 
 .team-section h1 {
-  font-size: 2.5em;
+  font-size: 2.8rem;
   color: rgb(255, 255, 255); /* Title in purple */
   margin-bottom: 80px;
 }
@@ -658,7 +664,7 @@ button:hover {
 
 .text-section {
   position:relative;
-  top: 50%; /* Vertical centering */
+  top: 55%; /* Vertical centering */
   left: 50%; /* Horizontal centering */
   transform: translate(-50%, -50%);
   text-align: center; /* Aligns the text to the center */
@@ -719,13 +725,12 @@ button:hover {
 /* contact */
 .hero-section {
     text-align: center;
-    padding: 10px 0px;
-    background: linear-gradient(to right, #6a11cb, #dc25fc);
+    /* padding: px 0px; */
     color: white;
   }
 
   .hero-section h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-bottom: 10px;
   }
 
@@ -757,33 +762,33 @@ button:hover {
     align-items: center;
     flex-wrap: wrap;
     min-height: 80px;
-    padding: 20pxpx;
-  }
+    padding: 20px;
+}
 
-  .form-box, .map-box {
+.form-box, .map-box {
     background: #1e1e1e;
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
     width: 40%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .form-box h2 {
+.form-box h2 {
     margin-bottom: 10px;
     color: #f7f6f4;
-  }
+}
 
-  .form-box input,
-  .form-box textarea {
+.form-box input,
+.form-box textarea {
     margin: 10px 0;
     padding: 12px;
     width: 95%;
     border: none;
     border-radius: 5px;
-  }
+}
 
-  form button {
+form button {
     background-color: #dc25fc;
     color: white;
     font-weight: bold;
@@ -791,15 +796,52 @@ button:hover {
     margin-top: 20px;
     padding: 12px;
     border-radius: 5px;
-  }
+}
 
-  form button:hover {
-    background-color:blue;
-  }
+form button:hover {
+    background-color: blue;
+}
 
-  .map-box iframe {
+.map-box iframe {
     border-radius: 10px;
-  }
+}
+
+/* Media Queries */
+/* Mobile Devices */
+@media (max-width: 767px) {
+    .contact-container {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px;
+    }
+
+    .form-box, .map-box {
+        width: 90%; /* Make both boxes take up almost the entire width */
+        margin: 10px 0; /* Add margin between the form and map */
+    }
+
+    form button {
+        width: 100%; /* Make the button take full width */
+    }
+}
+
+/* Tablets and Medium Devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .form-box, .map-box {
+        width: 48%; /* Make both boxes take up 48% of the container width */
+    }
+
+    form button {
+        width: 100%; /* Button takes up full width for better mobile/tablet use */
+    }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1025px) {
+    .form-box, .map-box {
+        width: 40%; /* Keep each box at 40% of the width on larger screens */
+    }
+}
+
 
   /* Footer */
   .footer {
