@@ -14,7 +14,7 @@ body {
 /* Header */
 /* Header */
 header {
-  background: linear-gradient(to right, purple, blue);
+  background: linear-gradient(to right,#49206c,#5953a3, #39c5ee,#98d09b);
   text-align: center;
   padding: 10px 10px;
   display: flex;
@@ -194,7 +194,7 @@ h2 {
   animation: slideIn 3s ease-in-out;
 }
 
-@keyframes slideIn {
+/* @keyframes slideIn {
   0% {
     opacity: 0;
     transform: translate(-50%, -100%);
@@ -207,7 +207,7 @@ h2 {
     opacity: 1;
     transform: translate(-50%, -50%);
   }
-}
+} */
 /* 
 .hero-text button {
   border: none;
@@ -221,17 +221,14 @@ h2 {
   cursor: pointer;
 } */
 
-.hero-text button:hover {
-  background-color: blue;
-  color: white;
-}
+
 
 /* Services Page */
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
+  padding: 35px;
   align-items: center;
 }
 .service .services-list {
@@ -251,22 +248,44 @@ h2 {
 
 
 /* Get started button */
-button {
+.hero-text button {
   display: flex;
-  padding: 10px 25px;
+  padding: 15px 25px;
   margin-top: 30px;
   align-items: center;
   display: inline-block;
-  background-color: purple;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  /* border: 1px solid white; */
+  border-radius: 0px;
   cursor: pointer;
   font-size: 18px;
+  background-color: black;
 }
 
-button:hover {
-  background-color: blue;
+.hero-text button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  /* border: 1px solid white; */
+}
+
+.service button{
+
+  display: flex;
+  padding: 15px 25px;
+  margin-top: 30px;
+  align-items: center;
+  display: inline-block;
+  color: rgb(252, 251, 251);
+  border: 1px solid white;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: black;
+}
+
+.service button:hover {
+  background-color: rgb(249, 246, 246);
+  color: black;
 }
 
 
@@ -309,8 +328,9 @@ button:hover {
 
 .card {
   cursor: pointer;
+  
   text-align: center;
-  background: purple;
+  background: #49206c;
   padding: 30px;
   width: 260px;
   height: 260px;
@@ -322,8 +342,9 @@ button:hover {
 
 .card:hover {
   transform: scale(1.1);
+  opacity: 1;
   box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6);
-  background-color: blue;
+  background: linear-gradient(to bottom,#49206c,#5953a3, #39c5ee,#98d09b);
 }
 
 .card h3 {
@@ -360,21 +381,24 @@ button:hover {
 .responsive-container-block {
   display: flex;
   padding: 20px;
-  max-width: 70%;
-  border: 2px solid #ddd;
+  max-width: 85%;
+  /* border: 2px solid #ddd; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to right, #6a11cb, #dc25fc);
+  background: linear-gradient(to bottom,#49206c,#5953a3, #39c5ee);
   gap: 20px;
+  border-radius: 20px;
 }
 
 .ultimateImg {
   flex: 1;
+  
 }
 
 .ultimateImg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .allText {
@@ -514,6 +538,7 @@ button:hover {
 
 
 .team-container {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   gap: 100px;
@@ -522,18 +547,18 @@ button:hover {
 
 /* Card styles */
 .team-card {
-  background: linear-gradient(
-    145deg,
-    rgb(231, 11, 231),
-    rgba(0, 0, 250, 0.473)
-  ); /* Purple to blue gradient */
+  
+  /* background: linear-gradient(to bottom,#49206c,#5953a3, #39c5ee,#98d09b); */
+  /* background-color: #49206c; */
+  background: linear-gradient(to bottom,#49206c,#39c5ee); 
   padding: 9px;
   width: 400px; /* Increased width for better layout */
   box-shadow: 0 5px 15px rgb(94, 90, 90);
   color: white;
   transition: transform 0.3s ease;
   border-color: white;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
+  border-radius: 20px;
 }
 
 /* Hover effect for cards */
@@ -552,20 +577,24 @@ button:hover {
 
 .photo-ceo {
     background-color: white;
+    border-radius: 100%;
+    padding: 50px;
     background-image: url(''); /* Path to your image */
     background-size: cover; /* Ensures the image covers the entire div */
     background-position: center; /* Centers the image */
-    width: 150px; /* Set the width of the div */
-    height: 150px; /* Set the height of the div */
+    width: 140px;
+    height: 140px;
   }
   
   .photo-director {
     background-color: white;
+    padding: 50px;
+    border-radius:100%;
     background-image: url(''); /* Path to your image */
     background-size: cover; /* Ensures the image covers the entire div */
     background-position: center; /* Centers the image */
-    width: 150px; /* Set the width of the div */
-    height: 150px; /* Set the height of the div */
+    width: 140px;
+    height: 140px;
   }
 .name-position {
   text-align: left;
@@ -604,9 +633,7 @@ button:hover {
   transition: color 0.3s ease;
 }
 
-.icon:hover {
-  color: yellow; /* Highlight effect on hover */
-}
+
 
 /* cortesra */
 
@@ -674,12 +701,13 @@ button:hover {
 }
 
 .text-section h1 {
+  
   margin: 0;
   font-size: 2rem;
 }
 
 .text-section p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   margin: 20px 0 0;
 }
@@ -720,6 +748,32 @@ button:hover {
   width: 150%;
   height: 150%;
 }
+}
+
+@media (max-width: 344px) and (max-height: 882px) {
+  .inner-container {
+    width: 95%;
+    height: 90%;
+  }
+
+  .circle {
+    width: 60px; /* Adjust circle size */
+    height: 60px;
+  }
+
+  .circle img {
+    width: 120%; /* Adjust circle image size */
+    height: 120%;
+  }
+
+  .text-section h1 {
+    font-size: 1.5rem; /* Slightly larger font for small devices */
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+  .text-section p {
+    font-size: 0.7rem; /* Adjust paragraph size */
+  }
 }
 
 /* contact */
@@ -789,17 +843,19 @@ button:hover {
 }
 
 form button {
-    background-color: #dc25fc;
-    color: white;
+  /* background: linear-gradient(to bottom,#49206c,#5953a3, #39c5ee,#98d09b); */
+    color: rgb(255, 252, 252);
+    background-color:#39c5ee ;
     font-weight: bold;
     cursor: pointer;
     margin-top: 20px;
     padding: 12px;
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 form button:hover {
-    background-color: blue;
+    background-color: #5953a3;
+    color: white;
 }
 
 .map-box iframe {
@@ -861,7 +917,9 @@ form button:hover {
 
   /* Footer */
   .footer {
-    background-color: purple;
+    /* background: linear-gradient(to bottom,#49206c,#5953a3, #39c5ee,#98d09b); */
+    /* background-color:#5953a3 ; */
+    background: linear-gradient(to right,#49206c, #39c5ee);
     color: #fefefe;
     width: 100%;
     margin-top: auto;
