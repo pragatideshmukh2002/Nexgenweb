@@ -170,6 +170,7 @@ h2 {
   }
 }
 
+
 /* Home Page */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("home.jpg");
@@ -183,6 +184,7 @@ h2 {
 
 .hero-text {
   text-align: center;
+  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -211,7 +213,7 @@ h2 {
   outline: 0;
   margin-top: 30px;
   display: inline-block;
-  padding: 20px 25px;
+  padding: 10px 25px;
   color: white;
   background-color: purple;
   text-align: center;
@@ -254,13 +256,6 @@ button:hover {
   background-color: blue;
 }
 
-.about-content {
-  background-color: #333;
-  padding: 20px;
-  border-radius: 5px;
-  width: 80%;
-  margin: 0 auto;
-}
 
 .team .team-members {
   display: flex;
@@ -509,6 +504,8 @@ button:hover {
 }
 
 /* Team container */
+
+
 .team-container {
   display: flex;
   justify-content: center;
@@ -605,6 +602,8 @@ button:hover {
 }
 
 /* cortesra */
+
+
 .main-container {
   width: 100%;
   height: 700px;
@@ -681,7 +680,7 @@ button:hover {
 /* contact */
 .hero-section {
     text-align: center;
-    padding: 20px 20px;
+    padding: 10px 0px;
     background: linear-gradient(to right, #6a11cb, #dc25fc);
     color: white;
   }
@@ -717,8 +716,8 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 80vh;
-    padding: 20px;
+    min-height: 70vh;
+    padding: 10px;
   }
 
   .form-box, .map-box {
@@ -764,11 +763,10 @@ button:hover {
 
   /* Footer */
   .footer {
-    background-color:purple;
+    background-color: purple;
     color: #fefefe;
     width: 100%;
-   
-    
+    margin-top: auto;
 }
 
 .footer .heading h2 {
@@ -776,15 +774,13 @@ button:hover {
     text-transform: uppercase;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     margin-bottom: 2rem;
-    
 }
 
 .footer .content {
     display: flex;
-    justify-content: center;
     justify-content: space-evenly;
     margin-left: 10%;
-  
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .footer .content p {
@@ -796,7 +792,6 @@ button:hover {
     color: #fefefe;
     display: flex;
     align-items: center;
-    
 }
 
 .footer .content a i {
@@ -824,11 +819,12 @@ footer hr {
 }
 
 /* Media Queries */
-/* Responsive Design */
+/* Small Devices (Mobile Portrait) */
 @media (max-width: 767px) {
     .footer .content {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center align items */
+        margin-left: 0; /* Remove left margin for mobile */
     }
 
     .footer .content > div {
@@ -840,12 +836,54 @@ footer hr {
     .footer .content a {
         justify-content: center; /* Center align icons and text */
     }
+
+    .footer .content h4, .footer .content p {
+        font-size: 16px; /* Smaller font size for mobile devices */
+    }
 }
 
+/* Medium Devices (Tablets) */
 @media (min-width: 768px) and (max-width: 1024px) {
+    .footer .content {
+        flex-direction: row; /* Keep items in row */
+        justify-content: space-evenly;
+        margin-left: 5%; /* Reduce left margin */
+    }
+
     .footer .content > div {
-        flex: 1 1 45%; /* Make items take half the width for medium screens */
+        margin: 1rem;
+        width: 45%; /* Make items take 45% width for medium screens */
         text-align: left;
+    }
+
+    .footer .content a {
+        justify-content: flex-start; /* Align items to the left */
+    }
+
+    .footer .content h4, .footer .content p {
+        font-size: 17px; /* Adjust font size for tablets */
+    }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1025px) {
+    .footer .content {
+        flex-direction: row; /* Keep items in row */
+        justify-content: space-evenly;
+    }
+
+    .footer .content > div {
+        margin: 1rem;
+        width: 22%; /* Make items take 22% width for large screens */
+        text-align: left;
+    }
+
+    .footer .content a {
+        justify-content: flex-start; /* Align items to the left */
+    }
+
+    .footer .content h4, .footer .content p {
+        font-size: 18px; /* Adjust font size for desktops */
     }
 }
 
