@@ -176,6 +176,7 @@ h2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("home.jpg");
   height: 100svh;
   width: 100%;
+  display: flex;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -242,7 +243,7 @@ h2 {
 
 button {
   display: flex;
-  padding: 20px 20px;
+  padding: 10px 25px;
   margin-top: 30px;
   background-color: purple;
   color: white;
@@ -633,11 +634,11 @@ button:hover {
 
 .circle {
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
-  width: 150px;
-  height: 150px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -648,16 +649,16 @@ button:hover {
 }
 
 .circle img {
-  width: 130%;
-  height: 130%;
+  width: 180%;
+  height: 180%;
   object-fit: contain;
   border-radius: 50%;
   z-index: 3; /* Ensure the circle image stays in the foreground */
 }
 
 .text-section {
-  position: absolute;
-  top: 60%; /* Vertical centering */
+  position:relative;
+  top: 50%; /* Vertical centering */
   left: 50%; /* Horizontal centering */
   transform: translate(-50%, -50%);
   text-align: center; /* Aligns the text to the center */
@@ -675,6 +676,44 @@ button:hover {
   font-size: 1rem;
   line-height: 1.6;
   margin: 20px 0 0;
+}
+
+@media (max-width: 768px) {
+  .inner-container {
+    width: 95%;
+    height: 90%;
+  }
+
+}
+.circle {
+  width: 100px;
+  height: 100px;
+}
+
+.circle img {
+  width: 150%;
+  height: 150%;
+}
+
+.text-section h1 {
+  font-size: 1.5rem;
+}
+
+.text-section p {
+  font-size: 0.8rem;
+}
+
+
+@media (max-width: 480px) {
+.circle {
+  width: 80px;
+  height: 80px;
+}
+
+.circle img {
+  width: 150%;
+  height: 150%;
+}
 }
 
 /* contact */
@@ -713,11 +752,12 @@ button:hover {
   /* Contact Form and Map */
   .contact-container {
     display: flex;
+    margin-top: 40px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 70vh;
-    padding: 10px;
+    min-height: 80px;
+    padding: 20pxpx;
   }
 
   .form-box, .map-box {
@@ -780,7 +820,7 @@ button:hover {
     display: flex;
     justify-content: space-evenly;
     margin-left: 10%;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    /* Allow items to wrap on smaller screens */
 }
 
 .footer .content p {
