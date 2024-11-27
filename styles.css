@@ -25,6 +25,7 @@ header {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 header .logo {
@@ -174,7 +175,7 @@ h2 {
 /* Home Page */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("home.jpg");
-  height: 100svh;
+  height: 100svh; /* Viewport height */
   width: 100%;
   display: flex;
   background-position: center;
@@ -185,7 +186,6 @@ h2 {
 
 .hero-text {
   text-align: center;
-  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -193,6 +193,94 @@ h2 {
   color: white;
   animation: slideIn 3s ease-in-out;
 }
+
+.hero-text h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.hero-text a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.hero-text button {
+  display: flex;
+  padding: 15px 25px;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: black;
+}
+
+.hero-text button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+/* Responsive Styling */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .hero-text h1 {
+    font-size: 35px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  /* Keeping the button fixed size */
+  .hero-text button {
+    padding: 15px 25px;
+    font-size: 18px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  /* Keeping the button fixed size */
+  .hero-text button {
+    padding: 15px 25px;
+    font-size: 18px;
+  }
+}
+
+/* For very small mobile devices */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-text p {
+    font-size: 12px;
+  }
+
+  /* Keeping the button fixed size */
+  .hero-text button {
+    padding: 15px 25px;
+    font-size: 18px;
+  }
+}
+
 
 /* @keyframes slideIn {
   0% {
@@ -209,17 +297,6 @@ h2 {
   }
 } */
 /* 
-.hero-text button {
-  border: none;
-  outline: 0;
-  margin-top: 30px;
-  display: inline-block;
-  padding: 10px 25px;
-  color: white;
-  background-color: purple;
-  text-align: center;
-  cursor: pointer;
-} */
 
 
 
@@ -637,142 +714,185 @@ h2 {
 
 /* cortesra */
 
-
-.main-container {
-  width: 100%;
-  height: 700px;
+.cortesra {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f4ece7;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  padding: 20px; /* Add padding to give space on smaller devices */
 }
 
-.inner-container {
-  width: 80%;
-  height: 80%;
+.container-cortesra {
   position: relative;
   background-color: #849480;
- 
-  box-sizing: border-box;
+  padding: 20px;
+  width: 90%;
+  max-width: 75%;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.inner-container img {
-  
+.container-cortesra::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 0.15; /* This only affects the background image */
-  position: absolute;
-  z-index: 0; /* Ensure it's behind other elements */
+  background-image: url("BGGGG-01.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 1;
 }
 
-.circle {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+.logo {
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: white; /* Optional: Add a background color for contrast */
-  z-index: 2; /* Keep it above the background */
+  justify-content: flex-start;
+  z-index: 2;
+  margin-top: 20px;
+  margin-left: 20%;
 }
 
-.circle img {
-  width: 180%;
-  height: 180%;
-  object-fit: contain;
+.logo img {
+  width: 150px;
+  height: auto;
   border-radius: 50%;
-  z-index: 3; /* Ensure the circle image stays in the foreground */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.text-section {
-  position:relative;
-  top: 55%; /* Vertical centering */
-  left: 50%; /* Horizontal centering */
-  transform: translate(-50%, -50%);
-  text-align: center; /* Aligns the text to the center */
+.logo-text {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.logo-text h1 {
+  font-size: 45px;
   color: white;
-  z-index: 2; /* Keeps it above the background image */
-  padding: 20px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
 }
 
-.text-section h1 {
-  
+.logo-text p {
+  font-size: 18px;
+  color: white;
   margin: 0;
-  font-size: 2rem;
 }
 
-.text-section p {
-  font-size: 1.5rem;
+.text {
+  position: relative;
+  margin-top: 30px;
+  z-index: 2;
+}
+
+.text h1 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.text p {
+  font-size: 1rem;
+  color: #ffffff;
   line-height: 1.6;
-  margin: 20px 0 0;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .logo img {
+    width: 120px;
+  }
+
+  .logo-text h1 {
+    font-size: 36px;
+  }
+
+  .logo-text p {
+    font-size: 16px;
+  }
+
+  .text h1 {
+    font-size: 20px;
+  }
+
+  .text p {
+    font-size: 14px;
+  }
+
+  /* Adjust the width of the container */
+  .container-cortesra {
+    max-width: 85%;
+  }
 }
 
 @media (max-width: 768px) {
-  .inner-container {
-    width: 95%;
-    height: 90%;
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
   }
 
-}
-.circle {
-  width: 100px;
-  height: 100px;
-}
+  .logo img {
+    width: 100px;
+  }
 
-.circle img {
-  width: 150%;
-  height: 150%;
-}
+  .logo-text h1 {
+    font-size: 30px;
+    text-align: center;
+  }
 
-.text-section h1 {
-  font-size: 1.5rem;
-}
+  .logo-text p {
+    font-size: 14px;
+    text-align: center;
+  }
 
-.text-section p {
-  font-size: 0.8rem;
-}
+  .text h1 {
+    font-size: 18px;
+  }
 
+  .text p {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 15px;
+    max-width: 90%;
+  }
+}
 
 @media (max-width: 480px) {
-.circle {
-  width: 80px;
-  height: 80px;
-}
-
-.circle img {
-  width: 150%;
-  height: 150%;
-}
-}
-
-@media (max-width: 344px) and (max-height: 882px) {
-  .inner-container {
-    width: 95%;
-    height: 90%;
+  .logo img {
+    width: 80px;
   }
 
-  .circle {
-    width: 60px; /* Adjust circle size */
-    height: 60px;
+  .logo-text h1 {
+    font-size: 28px;
   }
 
-  .circle img {
-    width: 120%; /* Adjust circle image size */
-    height: 120%;
+  .logo-text p {
+    font-size: 12px;
   }
 
-  .text-section h1 {
-    font-size: 1.5rem; /* Slightly larger font for small devices */
-    line-height: 1.3;
-    margin-bottom: 10px;
+  .text h1 {
+    font-size: 16px;
   }
-  .text-section p {
-    font-size: 0.7rem; /* Adjust paragraph size */
+
+  .text p {
+    font-size: 10px;
+  }
+
+  .container {
+    padding: 10px;
   }
 }
 
