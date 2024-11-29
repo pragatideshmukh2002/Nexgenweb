@@ -185,6 +185,7 @@ h2 {
 }
 
 
+
 /* Home Page */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("home.jpg");
@@ -222,12 +223,6 @@ h2 {
   transform: translateY(-20px);
 
 }
-
-/* .hero-text a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-} */
 
 .hero-text button {
   display: flex;
@@ -276,7 +271,6 @@ h2 {
     transform: translateY(0);
   }
 }
-/* Responsive Styling */
 
 /* For tablets and smaller screens */
 @media (max-width: 1024px) {
@@ -332,21 +326,6 @@ h2 {
 }
 
 
-/* @keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -100%);
-  }
-  50% {
-    opacity: 0.5;
-    transform: translate(-50%, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-} */
-/* 
 
 
 
@@ -373,7 +352,6 @@ h2 {
   text-align: center;
   width: 20%;
 }
-
 
 /* Get started button */
 .hero-text button {
@@ -471,8 +449,11 @@ h2 {
   color: white;
 }
 
+
+
+
 /* meet the team */
-.team .team-members {
+/* .team .team-members {
   display: flex;
   justify-content: space-between;
 }
@@ -505,7 +486,126 @@ h2 {
   background-color: #333;
   padding: 20px;
   text-align: center;
+} */
+
+
+
+/*meeet team */
+
+/* Section styles */
+.team-section {
+  text-align: center;
+  padding: 20px;
 }
+
+.team-section h1 {
+  font-size: 2.8rem;
+  color: rgb(255, 255, 255); /* Title in purple */
+  margin-bottom: 80px;
+}
+
+/* Team container */
+
+
+.team-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+/* Card styles */
+.team-card {
+  
+  /* background: linear-gradient(to bottom,#49206c,#5953a3, #39c5ee,#98d09b); */
+  /* background-color: #49206c; */
+  background: linear-gradient(to bottom,#49206c,#39c5ee); 
+  padding: 9px;
+  width: 400px; /* Increased width for better layout */
+  box-shadow: 0 5px 15px rgb(94, 90, 90);
+  color: white;
+  transition: transform 0.3s ease;
+  border-color: white;
+  /* border: 1px solid #ddd; */
+  border-radius: 20px;
+}
+
+/* Hover effect for cards */
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Photo and content */
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  margin-bottom: 15px;
+}
+
+.photo-ceo {
+    background-color: white;
+    border-radius: 100%;
+    padding: 50px;
+    background-image: url(''); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    width: 140px;
+    height: 140px;
+  }
+  
+  .photo-director {
+    background-color: white;
+    padding: 50px;
+    border-radius:100%;
+    background-image: url(''); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    width: 140px;
+    height: 140px;
+  }
+.name-position {
+  text-align: left;
+}
+
+.name-position h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.name-position h3 {
+  font-size: 1em;
+  margin: 5px 0;
+  color: rgb(255, 255, 255); /* Subtext in blue */
+}
+
+/* Information text */
+.info {
+  font-size: 0.9em;
+  margin: 15px 0;
+  text-align: left;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.icon {
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+
+
 
 
 
@@ -660,118 +760,6 @@ h2 {
   }
   
 
-/*meeet team */
-
-/* Section styles */
-.team-section {
-  text-align: center;
-  padding: 20px;
-}
-
-.team-section h1 {
-  font-size: 2.8rem;
-  color: rgb(255, 255, 255); /* Title in purple */
-  margin-bottom: 80px;
-}
-
-/* Team container */
-
-
-.team-container {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-  flex-wrap: wrap;
-}
-
-/* Card styles */
-.team-card {
-  
-  /* background: linear-gradient(to bottom,#49206c,#5953a3, #39c5ee,#98d09b); */
-  /* background-color: #49206c; */
-  background: linear-gradient(to bottom,#49206c,#39c5ee); 
-  padding: 9px;
-  width: 400px; /* Increased width for better layout */
-  box-shadow: 0 5px 15px rgb(94, 90, 90);
-  color: white;
-  transition: transform 0.3s ease;
-  border-color: white;
-  /* border: 1px solid #ddd; */
-  border-radius: 20px;
-}
-
-/* Hover effect for cards */
-.team-card:hover {
-  transform: translateY(-10px);
-}
-
-/* Photo and content */
-.card-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-
-  margin-bottom: 15px;
-}
-
-.photo-ceo {
-    background-color: white;
-    border-radius: 100%;
-    padding: 50px;
-    background-image: url(''); /* Path to your image */
-    background-size: cover; /* Ensures the image covers the entire div */
-    background-position: center; /* Centers the image */
-    width: 140px;
-    height: 140px;
-  }
-  
-  .photo-director {
-    background-color: white;
-    padding: 50px;
-    border-radius:100%;
-    background-image: url(''); /* Path to your image */
-    background-size: cover; /* Ensures the image covers the entire div */
-    background-position: center; /* Centers the image */
-    width: 140px;
-    height: 140px;
-  }
-.name-position {
-  text-align: left;
-}
-
-.name-position h2 {
-  font-size: 1.5em;
-  margin: 0;
-}
-
-.name-position h3 {
-  font-size: 1em;
-  margin: 5px 0;
-  color: rgb(255, 255, 255); /* Subtext in blue */
-}
-
-/* Information text */
-.info {
-  font-size: 0.9em;
-  margin: 15px 0;
-  text-align: left;
-}
-
-/* Icons */
-.icons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
-}
-
-.icon {
-  font-size: 1.5em;
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
 
 
 
