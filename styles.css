@@ -416,10 +416,8 @@ h2 {
   color: black;
 }
 
-
 .card {
   cursor: pointer;
-
   text-align: center;
   background: black;
   padding: 30px;
@@ -429,29 +427,28 @@ h2 {
   border: 3px solid white;
   border-radius: 50%;
   transition: transform 0.3s, box-shadow 0.3s;
-  animation: gradientMove 6s infinite linear;
 }
 
 .card:hover {
   transform: scale(1.1);
   opacity: 1;
   box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6);
-  background: linear-gradient(to bottom,#49206c,#5953a3, #39c5ee,#98d09b);
- 
+  background: linear-gradient(to top, #49206c, #5953a3, #39c5ee, #98d09b, #49206c); 
+  background-size: 400% 400%; /* Allow larger area for movement */
+  animation: gradientMove 6s infinite linear;
 }
 
-/* Gradient Animation */
+/* Bottom-to-Top Gradient Animation */
 @keyframes gradientMove {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    background-position: 50% 100%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 50% 0%;
   }
 }
+
+
 .card h3 {
   padding: 30px;
   font-size: 1em;
