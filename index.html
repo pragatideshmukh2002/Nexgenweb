@@ -42,16 +42,30 @@
 
   <div id="home" class="hero-image">
     <div class="hero-text">
-      <h1 >POWERING THE FUTURE OF BUSINESS </h1>
+      <h1 id="typewriter">POWERING THE FUTURE OF BUSINESS </h1>
       <br>
-      <p >Your partner in innovation, delivering exceptional web development, IT services, and
+      <p id="byline">Your partner in innovation, delivering exceptional web development, IT services, and
         digital marketing solutions.</p>
       <a href="#contact">
-        <button>Get Started Today</button>
+        <button id="cta-button">Get Started Today</button>
       </a>
     </div>
   </div>
-
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    const bylineElement = document.getElementById("byline");
+    const ctaButton = document.getElementById("cta-button");
+  
+    // Trigger animations after text reveal completes
+    setTimeout(() => {
+      bylineElement.style.animation = "fadeInUp 1s ease-in-out forwards";
+    }, 1500); // Matches text animation duration
+  
+    setTimeout(() => {
+      ctaButton.style.animation = "fadeInUp 1s ease-in-out forwards";
+    }, 1800);
+  });
+  
+  </script>
 
   <!-- Service Section -->
   <section id="service" class="service" style="height: 100%; ">
